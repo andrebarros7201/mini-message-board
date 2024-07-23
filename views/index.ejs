@@ -1,6 +1,7 @@
 <html lang="en">
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="./style.css"/>
   </head>
   <body>
     <nav>
@@ -9,10 +10,10 @@
         <li><a href="/new">New</a></li>
       </ul>
     </nav>
-    <ul>
+    <ul class="messages">
       <% messages.map((message, index)=>{ %>
       <li>
-        User: <%= message.user%>: <%= message.text%> @ <%= message.added%>
+        <%= message.user%>: <%= message.text%> @ <%= message.added%>
         <button><a href="/<%= index%>" >View Message</a></button>
       </li>
       <% })%>
