@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title><%= title%></title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Index</a></li>
+        <li><a href="/new">New</a></li>
+      </ul>
+    </nav>
+    <form action="/new" method="post">
+      <span>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          minlength="2"
+          required="true" />
+      </span>
+      <span>
+        <label for="message">Message</label>
+        <input
+          type="text"
+          id="message"
+          name="message"
+          minlength="2"
+          required="true" />
+      </span>
+      <button type="submit">Create</button>
+    </form>
+  </body>
+</html>

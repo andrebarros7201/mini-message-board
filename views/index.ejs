@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Index</a></li>
+        <li><a href="/new">New</a></li>
+      </ul>
+    </nav>
+    <ul>
+      <% messages.map((message, index)=>{ %>
+      <li>
+        User: <%= message.user%>: <%= message.text%> @ <%= message.added%>
+        <button><a href="/<%= index%>" >View Message</a></button>
+      </li>
+      <% })%>
+    </ul>
+  </body>
+</html>
